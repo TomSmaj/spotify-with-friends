@@ -14,12 +14,12 @@ class Song extends Component {
 
     componentDidMount() {
         console.log("get request being made");
-        // $.get("/get-song", {name: this.state.title}, function(data){
-        //     console.log(data);
-        // })
-        $.get("/get-song", function(){
-            console.log("get request for song made");
+        $.get("/get-song/" + this.state.title).then(res => {
+            console.log(res);
         })
+        // $.get("/get-song", function(){
+        //     console.log("get request for song made");
+        // })
     }
 
     render() {
