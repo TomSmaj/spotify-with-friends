@@ -1,0 +1,29 @@
+{
+  "name": "spotify-with-friends",
+  "version": "1.0.0",
+  "description": "recommend tracks to friends via Spotify API. See when they've listened to them.",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "node-spotify-api": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSmaj/spotify-with-friends.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomSmaj/spotify-with-friends/issues"
+  },
+  "homepage": "https://github.com/TomSmaj/spotify-with-friends#readme"
+}

@@ -1,0 +1,4 @@
+process for requesting song info
+1.) when componenet loads (one of teh song tiles) ,client side get request containing trach and artist
+2.) route exists for that request in routes.js, make spotify-api request, return reply
+3.) use data from response to populate tile info (track name, artist name, and album art)
